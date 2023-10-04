@@ -1,0 +1,5 @@
+$ docker run -dit debian
+- d detached - runs in background
+- i interactive - stdinin open
+- t terminal
+
