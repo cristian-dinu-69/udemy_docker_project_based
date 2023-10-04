@@ -1,0 +1,12 @@
+download jenkins and apache
+download httpd
+u may use docker search TERM
+
+$ docker search jenkins
+-- pick jenkins/jenkins
+$ docker pull httpd:2-alpine
+$ docker images
+# docker rmi jenkins/jenkins
+$ docker rmi httpd:2-alpine
+$ docker system df
+$ docker images
