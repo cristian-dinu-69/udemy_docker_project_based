@@ -1,0 +1,29 @@
+-- naming containers
+$ docker run -dit debian
+$ docker run -dit --name web debian
+$ docker ps
+$ docker ps -a
+$ docker ps -l --last container started
+$ docker stop web
+$ docker ps
+$ docker ps -a
+$ docker rm web
+$ docker ps -a
+$ docker run -dit --name web debian
+$ docker stop web
+$ docker ps
+$ docker start web
+$ docker run -dit --name --restart=always 4th_web debian
+in case stops (error) container is automatically restarted
+$ docker inspect 4th_web | grep -A3 RestartPolicy
+$ docker kill <<container>>
+$ docker system prune
+$ docker ps -a
+$ docker run --rm hello-world - dcker started the container --did something : stoped: exited--removed
+$ docker log 
+
+$ docker run -dit hello-world
+$ docker log --help
+$ docker logs 1842xxxxx
+$ docker logs -t 1842xxxxxx
+$ docker logs -f 1842xxxxxx

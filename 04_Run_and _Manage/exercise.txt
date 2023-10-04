@@ -1,0 +1,19 @@
+-- start a container
+$ docker run -dit redis
+$ docker ps
+-- start a container with name
+$ docker run -dit --name redis_container redis
+$ docker ps
+$ docker stop redis_container
+$ docker ps
+-- Let’s run a container with the “--rm” option.
+$  docker run --rm hello-world
+$ docker ps -a
+$ docker run hello-world
+$ docker ps -a
+--logs
+$ docker logs CONTAINER_NAME
+$ docker run --name test_container -d hello-world
+$ docker ps -a
+$ docker logs test_container
+$ docker logs -t test_container
