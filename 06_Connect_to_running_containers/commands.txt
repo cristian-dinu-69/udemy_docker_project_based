@@ -1,0 +1,56 @@
+$ docker run -it --name apache httpd /bin/bash
+# pwd
+# ls
+# exit
+$ docker ps
+$ docker run -idt --name apache httpd /bin/bash
+$ docker run -dit httpd
+$ docker ps
+$ docker exec -it container_id /bin/bash
+root@23445# hostname exit
+$ docker exec -it container_id sh
+exit
+$ docker run -dit --name execution httpd
+$ docker ps
+
+$ docker exec -d execution touch /root/hello
+$ docker exec -it execution bash
+root@2345 # ls /root
+$ docker exec -it execution ls /root
+$ docker exec -it execution bash
+root@2345 uptime ? man ? nano
+apt update
+apt install -y vim --afects only the container , not the image
+exit
+
+$ docker top execution - what is running in the container
+
+
+DOCKER LOGGING
+
+$ docker run -dit --name busylogs -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
+
+$ docker logs busylogs
+
+$ docker logs busylogs | grep -A5 password
+
+password  - 510e6cb1821948ab838304e4572aa9fc - temporary
+
+
+
+$ docker logs -f busylogs
+
+$ docker logs -t busylogs
+
+docker logs -tf busylogs
+
+docker logs -t --since 2011-11-11 busylogs
+
+grep -i docker /var/log/syslog
+
+journalctl -n 25
+
+journalctl -u docker.service -n 25
+
+journalctl --no-pager -u docker.service -n 25
+
