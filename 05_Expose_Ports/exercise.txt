@@ -1,0 +1,18 @@
+# The image name for the Apache HTTP Server is "httpd." 
+# Start an image named "apache_welcome" using the "httpd" image. 
+# Use port 9900 on the docker host system to communicate with port 80 on the container.
+
+$  docker run --name apache_welcome -d -p 9900:80 httpd:latest
+
+# Use the "​docker ps​" command and check the "PORTS" column for apache_welcome container.
+
+$ docker ps -a
+
+# Use the "curl" command to access Apache
+
+$ curl http://localhost:9900
+# You should see HTML.
+
+# If Docker on your local system, you can check Apache by
+
+#  "​http://localhost:9900​" in web browser."

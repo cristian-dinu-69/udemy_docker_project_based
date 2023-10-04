@@ -1,0 +1,26 @@
+--using nginx
+$ docker run --name some-nginx -d - p 8080:80 some-context-nginx
+$ docker ps
+$ curl http://localhost:8080
+$ docker logs our_nginx
+$ docker stop our_nginx
+docker rm our_nginx
+$ docker stop another_nginx
+# create index.html file
+-- -v volume mount in read only mode.
+$ docker run -p 8080:80 --name another_nginx -v ${PWD}/webpages/:/usr/share/nginx/html:ro -d nginx
+$ curl http://localhost:8080    
+$ docker exec -it another_nginx bash
+$ ls
+$ cd /usr/share/nginx/html/
+$ ls 
+# cat index.html
+# open another terminal -  go to webpages dir
+# modify the index.html --> Yellow World
+# run in the first terminal #root@2344555 : (container)
+$ cat index.html --> you will se the alterations present in container
+$ exit
+# close 2nd terminal
+
+
+
